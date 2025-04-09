@@ -44,9 +44,7 @@ Each of these developed prototypes has its own template logic adapted to the str
 template and testing specific outputs. In contrast, testing a full program requires running an independently executable source file, while functions must be validated based on their defined interface and behaviour.
 
 The solid lines in the diagram represent prototypes already developed and available in this repository. Dashed lines indicate
-intended future prototypes that have not yet been implemented. They highlight potential extensions, particularly for Parsons
-Problems involving complete programs and for Fill-the-Gaps tasks requiring standalone functions, where additional complexity
-in evaluation would need to be addressed.
+intended future prototypes that have not yet been implemented.
 
 
 ```mermaid
@@ -122,7 +120,22 @@ flowchart TD
 
 ## Set Up Process
 
-Um die hier angebotenen 
+To integrate the provided prototypes into your Moodle system:
+
+1. Download the XML files located in `./prototypes/`.
+   Each XML file contains the complete configuration for a specific custom prototype.
+
+2. In Moodle, navigate to the Question Bank of an existing Coderunner Quiz.
+
+3. Select the category where your built-in prototypes are stored in (`CR_PROTOTYPES` or similar)
+
+4. Select `Import` in the upper left corner and upload the XML-Files.
+
+5. Go back to `Questions` in the dropdown menu in the upper left corner and check if the new prototype is available in the Prototypes-Category of course. If so, it will then be available when creating new CodeRunner questions.
+
+> ⚠️ **Note:**  
+> Prototypes are normal Moodle question definitions stored in XML format.  
+> They define all settings, templates, grading behaviours, and user interfaces for the new question type.
 
 
 ## Documentation of each Prototype
