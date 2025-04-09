@@ -111,9 +111,8 @@ flowchart TD
 ## Fill-The-Gaps
 
 ### General
-### General
 
-A Fill-the-Gaps question requires students to complete missing parts of a given C code fragment. Instead of writing code from
+A Fill-the-Gaps question requires students to complete missing parts of a given code fragment. Instead of writing code from
 scratch, learners are presented with a partially completed program where specific sections are left blank for them to fill in.
 
 Technically, Fill-the-Gaps tasks in Coderunner use placeholders in the `globalextra` field of the question definition. These
@@ -125,7 +124,7 @@ The syntax for these placeholders is as follows:
 - `{[ 20 ]}` inserts an HTML text input field with a width of 20 characters.
 - `{[ 10, 5 ]}` inserts an HTML textarea with 10 columns and 5 rows.
 
-Once the student submits their answer, the entered values are reinserted into the original template, replacing the placeholders.
+Once students submit their answer, the entered values are reinserted into the original template, replacing the placeholders.
 The resulting completed program is then compiled and executed according to the grading logic defined in the snippet, function,
 or program template.
 
@@ -140,6 +139,14 @@ int main() {
     return 0;
 }
 ```
+
+> ⚠️ **Warning:**  
+> Due to the parsing logic used in the current templates, quotation marks (`"`) are not allowed inside Fill-the-Gaps inputs.
+> 
+> When defining tasks, tutors should ensure that no gap requires students to enter quotation marks.
+> Internally, the student's responses are inserted into the C template by manually processing a JSON structure using `replace` functions within Twig.
+> Quotation marks would interfere with this parsing process and cause invalid code generation.
+
 
 ### Snippet
 
