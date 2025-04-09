@@ -227,3 +227,66 @@ To configure the corresponding test cases in Moodle Coderunner, the test definit
 
 ![Example Test Case Configuration](./images/Gapfiller_Snippet_Test_Configuration.png)
 
+
+### Program
+
+In Fill-the-Gaps exercises designed for complete programs, the student's completed code is inserted into a full C program template, which is then compiled and executed for each test case separately.
+
+Unlike the snippet-based approach, the program is not duplicated within a single source file for multiple tests. Instead, the program is compiled once and executed multiple times, each time providing different standard input values through `scanf` or similar mechanisms.
+
+For example, the following incomplete program might be presented to the student:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int pin;
+    
+    printf("Enter PIN: ");
+    scanf("%d", &pin);
+    
+    {[1, 18]}
+        printf("{[1, 20]}\n");
+    }
+    {[1, 18]}
+        printf("{[1, 20]}\n");
+    }
+    
+    return 0;
+}
+```
+
+The student's completed solution is inserted into this template and compiled into a full program, such as:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int pin;
+    
+    printf("Enter PIN: ");
+    scanf("%d", &pin);
+    
+    if(pin == 1234) {
+        printf("Access granted\n");
+    }
+    else { 
+        printf("Access denied\n");
+    }
+    
+    return 0;
+}
+```
+
+Each test case provides a different standard input value (for example, `1234` or `1224`) to simulate different scenarios.
+The student's completed program reads the input at runtime using `scanf`, processes it, and produces the corresponding output.
+
+The configuration of the test cases in Moodle Coderunner must reflect this structure. An example configuration is shown below:
+
+![Example Program Test Case Configuration](./images/Gapfiller_Program_Test_Configuration.png)
+
+In this setup:
+- **Test case**: left empty (`//`) as no pre-execution setup is needed.
+- **Standard Input**: Provides the input that will be fed into the program at runtime (e.g., `1234` or `1224`).
+- **Expected Output**: Defines the output the program must produce based on the given input (e.g., `Enter PIN: Access granted`).
+- **Extra template data**: Remains empty for standard Fill-the-Gaps program exercises.
