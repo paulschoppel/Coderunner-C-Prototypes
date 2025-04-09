@@ -545,3 +545,15 @@ In this setup:
 - **Extra template data**: Usually not required.
 
 This structure allows targeted evaluation of students' ability to reconstruct functional logic, focusing on function signatures, control flow, and return values.
+
+# Acknowledgements
+
+This repository builds upon the outstanding work of the Moodle **CodeRunner** plugin, developed and maintained by **Richard Lobb** and other contributors. The CodeRunner project provides the foundational infrastructure that makes the creation of custom programming exercises possible within the Moodle environment.
+
+The original CodeRunner source code, including the prototypes, is licensed under the [GNU General Public License v2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) (GPL-2.0).  
+The CodeRunner plugin repository is available at [github.com/trampgeek/moodle-qtype_coderunner](https://github.com/trampgeek/moodle-qtype_coderunner). 
+
+Since the Prototypes located in `./prototypes/` are derivatives of the Prototypes published on [coderunner.org.nz](https://coderunner.org.nz/), all additions provided in this repository are derivative works based on the original CodeRunner framework and are therefore distributed under the same GPL-2.0 license.
+
+Special thanks to Richard Lobb and the CodeRunner community for providing a robust and flexible foundation for developing custom question types in computer science education.
+
