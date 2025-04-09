@@ -39,11 +39,11 @@ in evaluation would need to be addressed.
 ```mermaid
 flowchart TD
     %% Main Node
-    Coderunner((Coderunner<br/>Custom Question Types in this Repo))
+    Coderunner((Custom Question Types provided in this Repository))
 
     %% Subcategories
     ParsonsProblem((Parsons Problem))
-    Gapfiller((Gapfiller))
+    Gapfiller((Fill-the-Gaps))
 
     %% Parsons Problem Nodes
     subgraph ParsonsProblemGroup [ ]
