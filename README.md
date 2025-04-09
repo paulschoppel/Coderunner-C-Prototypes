@@ -128,6 +128,15 @@ Once students submit their answer, the entered values are reinserted into the or
 The resulting completed program is then compiled and executed according to the grading logic defined in the snippet, function,
 or program template.
 
+
+> ⚠️ **Warning:**  
+> Due to the parsing logic used in the current templates, quotation marks (`"`) are not allowed inside Fill-the-Gaps inputs.
+> 
+> When defining tasks, tutors should ensure that no gap requires students to enter quotation marks.
+> Internally, the student's responses are inserted into the C template by manually processing a JSON structure using `replace` functions within Twig.
+> Quotation marks would interfere with this parsing process and cause invalid code generation.
+
+
 For example, an incomplete program might be defined as follows:
 
 ```c
@@ -139,13 +148,6 @@ int main() {
     return 0;
 }
 ```
-
-> ⚠️ **Warning:**  
-> Due to the parsing logic used in the current templates, quotation marks (`"`) are not allowed inside Fill-the-Gaps inputs.
-> 
-> When defining tasks, tutors should ensure that no gap requires students to enter quotation marks.
-> Internally, the student's responses are inserted into the C template by manually processing a JSON structure using `replace` functions within Twig.
-> Quotation marks would interfere with this parsing process and cause invalid code generation.
 
 
 ### Snippet
