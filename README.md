@@ -107,10 +107,15 @@ flowchart TD
 
 ```
 
+## Set Up Process (Instructions how to add the provided prototypes to your moodle system)
+Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. 
 
-## Fill-The-Gaps
 
-### General
+## Documentation of each Prototype
+
+### Fill-The-Gaps
+
+#### General
 
 A Fill-the-Gaps question requires students to complete missing parts of a given code fragment. Instead of writing code from
 scratch, learners are presented with a partially completed program where specific sections are left blank for them to fill in. To initialize such a question, you need to create a new Coderunner question and select the prototype `c_gapfiller_snippet` or `c_gapfiller_programm`
@@ -150,7 +155,7 @@ int main() {
 ```
 
 
-### Snippet
+#### Snippet
 
 In Fill-the-Gaps exercises designed for code snippets, the student's completed code is inserted multiple times into a controlled C program template, once for each defined test case.
 
@@ -228,7 +233,7 @@ To configure the corresponding test cases in Moodle Coderunner, the test definit
 ![Example Test Case Configuration](./images/Gapfiller_Snippet_Test_Configuration.png)
 
 
-### Program
+#### Program
 
 In Fill-the-Gaps exercises designed for complete programs, the student's completed code is inserted into a full C program template, which is then compiled and executed for each test case separately.
 
@@ -291,9 +296,9 @@ In this setup:
 - **Expected Output**: Defines the output the program must produce based on the given input (e.g., `Enter PIN: Access granted`).
 - **Extra template data**: Remains empty for standard Fill-the-Gaps program exercises.
 
-## Parsons Problem
+### Parsons Problem
 
-### General
+#### General
 
 A Parsons Problem is a type of programming exercise where students are given a set of code lines in a scrambled order. Their
 task is to arrange the lines correctly to form a logically valid and syntactically correct program. Parsons Problems promote
@@ -309,7 +314,7 @@ To create Parsons Problems in Moodle Coderunner for C programming, the following
 6. Save the question configuration.
 
 
-### Snippet
+#### Snippet
 
 In Parsons Problem exercises designed for code snippets, students are presented with shuffled lines of a small program **fragment**. For example, students might be given the following shuffled lines in the Moodle Coderunner interface:
 
@@ -433,7 +438,7 @@ In this setup:
 - **Extra template data**: Usually not required.
 
 
-### Function
+#### Function
 
 In Parsons Problem exercises designed for standalone functions, students are given scrambled lines that define an entire function, including control structures like `if` statements or loops.  
 Their task is to reorder the lines and reconstruct a correct and logically functioning implementation.
