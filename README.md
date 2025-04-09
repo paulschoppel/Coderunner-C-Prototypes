@@ -109,6 +109,38 @@ flowchart TD
 
 
 ## Fill-The-Gaps
+
+### General
+### General
+
+A Fill-the-Gaps question requires students to complete missing parts of a given C code fragment. Instead of writing code from
+scratch, learners are presented with a partially completed program where specific sections are left blank for them to fill in.
+
+Technically, Fill-the-Gaps tasks in Coderunner use placeholders in the `globalextra` field of the question definition. These
+placeholders are replaced at runtime by HTML input or textarea elements, into which the students enter their missing code
+fragments.
+
+The syntax for these placeholders is as follows:
+
+- `{[ 20 ]}` inserts an HTML text input field with a width of 20 characters.
+- `{[ 10, 5 ]}` inserts an HTML textarea with 10 columns and 5 rows.
+
+Once the student submits their answer, the entered values are reinserted into the original template, replacing the placeholders.
+The resulting completed program is then compiled and executed according to the grading logic defined in the snippet, function,
+or program template.
+
+For example, an incomplete program might be defined as follows:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 3;
+    printf("Sum: {[ 5 ]}\n");
+    return 0;
+}
+```
+
 ### Snippet
 
 In Fill-the-Gaps exercises designed for code snippets, the student's completed code is inserted multiple times into a controlled C program template, once for each defined test case.
