@@ -308,7 +308,6 @@ To create Parsons Problems in Moodle Coderunner for C programming, the following
 5. Use the **Unindent** and **Shuffle** buttons in the **Answer preload** field to remove proper indentation and randomize the line order.
 6. Save the question configuration.
 
-------------------------
 
 ### Snippet
 
@@ -433,3 +432,88 @@ In this setup:
 - **Expected Output**: Matches the program's expected printed result for the provided conditions.
 - **Extra template data**: Usually not required.
 
+
+### Function
+
+In Parsons Problem exercises designed for standalone functions, students are given scrambled lines that define an entire function, including control structures like `if` statements or loops.  
+Their task is to reorder the lines and reconstruct a correct and logically functioning implementation.
+
+For example, students might be given the following shuffled lines in the Moodle Coderunner interface:
+
+```text
+}
+} else {
+return b - a;
+int abs_diff(int a, int b) {
+}
+return a - b;
+if (a > b) {
+```
+
+The correct reconstruction would produce the following function:
+
+```c
+int abs_diff(int a, int b) {
+    if (a > b) {
+        return a - b;
+    } else {
+        return b - a;
+    }
+}
+```
+
+This solution is then inserted into the testing template, which compiles and runs the student's reconstructed function against a series of predefined test cases.
+An example of the template-generated program could look like:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdbool.h>
+#include <math.h>
+
+#define SEPARATOR "#<ab@17943918#@>#"
+
+// Student code:
+int abs_diff(int a, int b) {
+    if (a > b) {
+        return a - b;
+    } else {
+        return b - a;
+    }
+}
+
+int main() {
+    {
+        printf("%d", abs_diff(-100, -97));
+    }
+    printf("%s\n", SEPARATOR);
+    {
+        printf("%d", abs_diff(-1, 9));
+    }
+    printf("%s\n", SEPARATOR);
+    {
+        printf("%d", abs_diff(5, 9));
+    }
+    printf("%s\n", SEPARATOR);
+    {
+        printf("%d", abs_diff(5, 5));
+    }
+    return 0;
+}
+```
+
+Each block tests the student's function implementation with different input values and checks if the function produces the correct output.
+
+The test cases in Moodle must be configured accordingly. An example configuration for the test case where `abs_diff(5, 9)` is called is shown below:
+
+![Example Parsons Function Test Configuration](./images/ParsonsProblem_Function_Test_Configuration.png)
+
+In this setup:
+- **Test case**: Specifies the code to invoke the student's function (`printf("%d", abs_diff(5, 9));`).
+- **Standard Input**: Remains empty.
+- **Expected Output**: Defines the expected return value printed to the console (`4` in this case).
+- **Extra template data**: Usually not required.
+
+This structure allows targeted evaluation of students' ability to reconstruct functional logic, focusing on function signatures, control flow, and return values.
