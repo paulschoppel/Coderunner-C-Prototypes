@@ -128,14 +128,11 @@ To integrate the provided prototypes into your Moodle system:
 2. In Moodle, navigate to the Question Bank of an existing Coderunner Quiz.
 
 3. Select the category where your built-in prototypes are stored in (`CR_PROTOTYPES` or similar)
+   ⚠️ Note: This step usually requires site administrator rights.
 
 4. Select `Import` in the upper left corner (default: `Questions`) and upload the XML-Files.
 
-5. Go back to `Questions` in the dropdown menu in the upper left corner and check if the new prototype is available in the Prototypes-Category of course. If so, it will then be available when creating new CodeRunner questions.
-
-> ⚠️ **Note:**  
-> Prototypes are normal Moodle question definitions stored in XML format.  
-> They define all settings, templates, grading behaviours, and user interfaces for the new question type.
+5. Go back to `Questions` in the dropdown menu in the upper left corner and check if the new prototype is available in the Prototypes-Category. If so, it will then be available when creating new CodeRunner questions.
 
 
 ## Documentation of each Prototype
@@ -467,7 +464,7 @@ In this setup:
 
 #### Function
 
-In Parsons Problem exercises designed for standalone functions, students are given scrambled lines that define an entire function, including control structures like `if` statements or loops.  
+In Parsons Problem exercises designed for standalone functions, students are given scrambled lines that define an entire function, including control structures like `if` statements or loops.
 Their task is to reorder the lines and reconstruct a correct and logically functioning implementation.
 
 For example, students might be given the following shuffled lines in the Moodle Coderunner interface:
