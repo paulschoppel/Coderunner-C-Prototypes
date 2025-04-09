@@ -128,6 +128,7 @@ To integrate the provided prototypes into your Moodle system:
 2. In Moodle, navigate to the Question Bank of an existing Coderunner Quiz.
 
 3. Select the category where your built-in prototypes are stored in (`CR_PROTOTYPES` or similar)
+
    ⚠️ Note: This step usually requires site administrator rights.
 
 4. Select `Import` in the upper left corner (default: `Questions`) and upload the XML-Files.
@@ -550,8 +551,7 @@ This structure allows targeted evaluation of students' ability to reconstruct fu
 
 This repository builds upon the outstanding work of the Moodle **CodeRunner** plugin, developed and maintained by **Richard Lobb** and other contributors. The CodeRunner project provides the foundational infrastructure that makes the creation of custom programming exercises possible within the Moodle environment.
 
-The original CodeRunner source code, including the prototypes, is licensed under the [GNU General Public License v2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) (GPL-2.0).  
-The CodeRunner plugin repository is available at [github.com/trampgeek/moodle-qtype_coderunner](https://github.com/trampgeek/moodle-qtype_coderunner). 
+The original CodeRunner source code is licensed under the [GNU General Public License v2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) (GPL-2.0). The CodeRunner plugin repository is available at [github.com/trampgeek/moodle-qtype_coderunner](https://github.com/trampgeek/moodle-qtype_coderunner). 
 
 Since the Prototypes located in `./prototypes/` are derivatives of the Prototypes published on [coderunner.org.nz](https://coderunner.org.nz/), all additions provided in this repository are derivative works based on the original CodeRunner framework and are therefore distributed under the same GPL-2.0 license.
 
