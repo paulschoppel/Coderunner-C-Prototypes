@@ -115,7 +115,7 @@ flowchart TD
 A Fill-the-Gaps question requires students to complete missing parts of a given code fragment. Instead of writing code from
 scratch, learners are presented with a partially completed program where specific sections are left blank for them to fill in.
 
-Technically, Fill-the-Gaps tasks in Coderunner use placeholders in the `globalextra` field of the question definition. These
+Technically, Fill-the-Gaps tasks in Coderunner use placeholders in the `Global extra` field of the question definition. These
 placeholders are replaced at runtime by HTML input or textarea elements, into which the students enter their missing code
 fragments.
 
@@ -178,6 +178,7 @@ The student's filled-in solution is then embedded multiple times into a full C p
 
 int main() {
     {
+        // Testcode for Test 1
         int number = 8;
         // Inserted student solution here
         if (number > 0) {
@@ -190,6 +191,7 @@ int main() {
         printf("%s\n", SEPARATOR);
     }
     {
+        // Testcode for Test 2
         int number = -9;
         // Inserted student solution here
         if (number > 0) {
@@ -202,6 +204,7 @@ int main() {
         printf("%s\n", SEPARATOR);
     }
     {
+        // Testcode for Test 3
         int number = 0;
         // Inserted student solution here
         if (number > 0) {
@@ -219,3 +222,8 @@ int main() {
 Each block independently evaluates a specific input (`number = 8`, `number = -9`, `number = 0`) and compares the program's output to the expected answer.
 
 This structure allows multiple test cases to be evaluated efficiently within a single compilation and execution cycle, while maintaining clarity and separation of outputs for automated grading.
+
+To configure the corresponding test cases in Moodle Coderunner, the test definition must match the structure of the template. Each test case specifies the preconditions for the snippet execution, typically by setting up the necessary input variables. An example configuration for the first test case, corresponding to number = 8, is shown below:
+
+![Example Test Case Configuration](./images/Gapfiller_Snippet_Test_Configuration.png)
+
