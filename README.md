@@ -129,7 +129,7 @@ To integrate the provided prototypes into your Moodle system:
 
 3. Select the category where your built-in prototypes are stored in (`CR_PROTOTYPES` or similar)
 
-4. Select `Import` in the upper left corner and upload the XML-Files.
+4. Select `Import` in the upper left corner (default: `Questions`) and upload the XML-Files.
 
 5. Go back to `Questions` in the dropdown menu in the upper left corner and check if the new prototype is available in the Prototypes-Category of course. If so, it will then be available when creating new CodeRunner questions.
 
@@ -372,7 +372,7 @@ if (temp_ok && pressure_ok) {
 ```
 
 This solution is then inserted into the testing template, which compiles and runs the student's code fragment against several predefined test cases. 
-An example template-generated program could be:
+The template-generated program corresponding to the example above would look like this:
 
 ```c
 #include <stdio.h>
@@ -494,8 +494,7 @@ int abs_diff(int a, int b) {
 }
 ```
 
-This solution is then inserted into the testing template, which compiles and runs the student's reconstructed function against a series of predefined test cases.
-An example of the template-generated program could look like:
+This solution is then inserted into the testing template, which compiles and runs the student's reconstructed function against a series of predefined test cases. The template-generated program would look like this:
 
 ```c
 #include <stdio.h>
