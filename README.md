@@ -1,6 +1,7 @@
 # Coderunner-C-Prototypes
 Specialized prototypes, examples, and documentation for custom C programming tasks in the Moodle Coderunner plugin.
 
+
 ## Introduction
 
 Programming exercises play a crucial role in computer science education, offering students practical opportunities
@@ -13,6 +14,18 @@ However, by developing and implementing custom prototypes, it is possible to int
 formats effectively. This repository provides two prototypes for Parsons Problems
 and two prototypes for Fill-the-Gaps tasks, specifically tailored 
 for use with Coderunner in C.
+
+## Structure of the Repository
+
+The structure of this repository is as follows:
+
+```
+Coderunner-C-Prototypes/
+├── prototypes/          # C code prototypes
+├── example_questions/   # Example questions based on the Prototypes provided here
+├── images/              # Images used in README
+└── README.md            # Project documentation
+```
 
 ## Why two prototypes for each question type?
 
@@ -107,8 +120,9 @@ flowchart TD
 
 ```
 
-## Set Up Process (Instructions how to add the provided prototypes to your moodle system)
-Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. Das hier ist beispieltext. Bla bla ba. 
+## Set Up Process
+
+Um die hier angebotenen 
 
 
 ## Documentation of each Prototype
