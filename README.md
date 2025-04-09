@@ -290,3 +290,144 @@ In this setup:
 - **Standard Input**: Provides the input that will be fed into the program at runtime (e.g., `1234` or `1224`).
 - **Expected Output**: Defines the output the program must produce based on the given input (e.g., `Enter PIN: Access granted`).
 - **Extra template data**: Remains empty for standard Fill-the-Gaps program exercises.
+
+## Parsons Problem
+
+### General
+
+### General
+
+A Parsons Problem is a type of programming exercise where students are given a set of code lines in a scrambled order. Their
+task is to arrange the lines correctly to form a logically valid and syntactically correct program. Parsons Problems promote
+deeper understanding of code structure, logical flow, and syntax without requiring students to memorize every detail of the language.
+
+To create Parsons Problems in Moodle Coderunner for C programming, the following general steps must be followed:
+
+1. Create a new Question and choose the prototype `c_ParsonsProblem_programm` or `c_ParsonsProblem_function`.
+2. Open the **Answer preload** section.
+3. Paste the correct, fully functional code into both the **Answer preload** and the **Answer** fields.
+4. Optionally add further **distractor lines** to the **Answer preload** (these are misleading or unnecessary lines intended to increase difficulty).
+5. Use the **Unindent** and **Shuffle** buttons in the **Answer preload** field to remove proper indentation and randomize the line order.
+6. Save the question configuration.
+
+------------------------
+
+### Snippet
+
+In Parsons Problem exercises designed for code snippets, students are presented with shuffled lines of a small program **fragment**. For example, students might be given the following shuffled lines in the Moodle Coderunner interface:
+
+```text
+int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
+} else if (temp_ok || pressure_ok) {
+if (temp_ok && pressure_ok) {
+printf("Instability detected. Cooling systems activated.");
+printf("CRITICAL CONDITION! Emergency shutdown initiated!");
+int temp_ok = (temperature >= 100.0 && temperature <= 200.0);
+printf("System stable. Reaction proceeding normally.");
+}
+} else {
+```
+
+The student's goal is to reconstruct the correct code snippet, which might look like:
+
+```c
+int temp_ok = (temperature >= 100.0 && temperature <= 200.0);
+int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
+if (temp_ok && pressure_ok) {
+    printf("System stable. Reaction proceeding normally.");
+} else if (temp_ok || pressure_ok) {
+    printf("Instability detected. Cooling systems activated.");
+} else {
+    printf("CRITICAL CONDITION! Emergency shutdown initiated!");
+}
+```
+
+This solution is then inserted into the testing template, which compiles and runs the student's code fragment against several predefined test cases. 
+An example template-generated program could be:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdbool.h>
+#include <math.h>
+
+#define SEPARATOR "#<ab@17943918#@>#"
+
+int main() {
+    {
+        float temperature = 118.3;
+        float pressure = 1.4;
+        // Student code:
+        int temp_ok = (temperature >= 100.0 && temperature <= 200.0);
+        int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
+        if (temp_ok && pressure_ok) {
+            printf("System stable. Reaction proceeding normally.");
+        } else if (temp_ok || pressure_ok) {
+            printf("Instability detected. Cooling systems activated.");
+        } else {
+            printf("CRITICAL CONDITION! Emergency shutdown initiated!");
+        }
+    }
+    printf("%s\n", SEPARATOR);
+    {
+        float temperature = 5.3;
+        float pressure = 1.4;
+        // Student code:
+        int temp_ok = (temperature >= 100.0 && temperature <= 200.0);
+        int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
+        if (temp_ok && pressure_ok) {
+            printf("System stable. Reaction proceeding normally.");
+        } else if (temp_ok || pressure_ok) {
+            printf("Instability detected. Cooling systems activated.");
+        } else {
+            printf("CRITICAL CONDITION! Emergency shutdown initiated!");
+        }
+    }
+    printf("%s\n", SEPARATOR);
+    {
+        float temperature = 118.3;
+        float pressure = 0.4;
+        // Student code:
+        int temp_ok = (temperature >= 100.0 && temperature <= 200.0);
+        int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
+        if (temp_ok && pressure_ok) {
+            printf("System stable. Reaction proceeding normally.");
+        } else if (temp_ok || pressure_ok) {
+            printf("Instability detected. Cooling systems activated.");
+        } else {
+            printf("CRITICAL CONDITION! Emergency shutdown initiated!");
+        }
+    }
+    printf("%s\n", SEPARATOR);
+    {
+        float temperature = 7.3;
+        float pressure = 0.4;
+        // Student code:
+        int temp_ok = (temperature >= 100.0 && temperature <= 200.0);
+        int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
+        if (temp_ok && pressure_ok) {
+            printf("System stable. Reaction proceeding normally.");
+        } else if (temp_ok || pressure_ok) {
+            printf("Instability detected. Cooling systems activated.");
+        } else {
+            printf("CRITICAL CONDITION! Emergency shutdown initiated!");
+        }
+    }
+    return 0;
+}
+```
+
+Each block tests the reconstructed code under different input conditions, verifying the program's correctness.
+
+The test cases in Moodle are configured accordingly. An example test setup for the first condition (`temperature = 118.3; pressure = 1.4;`) is shown below:
+
+![Example Parsons Snippet Test Configuration](./images/ParsonsProblem_Snippet_Test_Configuration.png)
+
+In this setup:
+- **Test case**: Sets up the input variables (`float temperature = 118.3; float pressure = 1.4;`).
+- **Standard Input**: Remains empty.
+- **Expected Output**: Matches the program's expected printed result for the provided conditions.
+- **Extra template data**: Usually not required.
+
