@@ -113,7 +113,7 @@ flowchart TD
 ### General
 
 A Fill-the-Gaps question requires students to complete missing parts of a given code fragment. Instead of writing code from
-scratch, learners are presented with a partially completed program where specific sections are left blank for them to fill in.
+scratch, learners are presented with a partially completed program where specific sections are left blank for them to fill in. To initialize such a question, you need to create a new Coderunner question and select the prototype `c_gapfiller_snippet` or `c_gapfiller_programm`
 
 Technically, Fill-the-Gaps tasks in Coderunner use placeholders in the `Global extra` field of the question definition. These
 placeholders are replaced at runtime by HTML input or textarea elements, into which the students enter their missing code
@@ -178,9 +178,9 @@ The student's filled-in solution is then embedded multiple times into a full C p
 
 int main() {
     {
-        // Testcode for Test 1
+        // Test code:
         int number = 8;
-        // Inserted student solution here
+        // Student code:
         if (number > 0) {
             printf("The number is positive.\n");
         } else if (number < 0) {
@@ -191,9 +191,9 @@ int main() {
         printf("%s\n", SEPARATOR);
     }
     {
-        // Testcode for Test 2
+        // Test code:
         int number = -9;
-        // Inserted student solution here
+        // Student code:
         if (number > 0) {
             printf("The number is positive.\n");
         } else if (number < 0) {
@@ -204,9 +204,9 @@ int main() {
         printf("%s\n", SEPARATOR);
     }
     {
-        // Testcode for Test 3
+        // Test code:
         int number = 0;
-        // Inserted student solution here
+        // Student code:
         if (number > 0) {
             printf("The number is positive.\n");
         } else if (number < 0) {
@@ -295,8 +295,6 @@ In this setup:
 
 ### General
 
-### General
-
 A Parsons Problem is a type of programming exercise where students are given a set of code lines in a scrambled order. Their
 task is to arrange the lines correctly to form a logically valid and syntactically correct program. Parsons Problems promote
 deeper understanding of code structure, logical flow, and syntax without requiring students to memorize every detail of the language.
@@ -357,6 +355,7 @@ An example template-generated program could be:
 
 int main() {
     {
+        // Test code:
         float temperature = 118.3;
         float pressure = 1.4;
         // Student code:
@@ -372,6 +371,7 @@ int main() {
     }
     printf("%s\n", SEPARATOR);
     {
+        // Test code:
         float temperature = 5.3;
         float pressure = 1.4;
         // Student code:
@@ -387,6 +387,7 @@ int main() {
     }
     printf("%s\n", SEPARATOR);
     {
+        // Test code:
         float temperature = 118.3;
         float pressure = 0.4;
         // Student code:
@@ -402,6 +403,7 @@ int main() {
     }
     printf("%s\n", SEPARATOR);
     {
+        // Test code:
         float temperature = 7.3;
         float pressure = 0.4;
         // Student code:
