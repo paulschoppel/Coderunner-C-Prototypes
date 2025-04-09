@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 857  -->
+  <question type="coderunner">
+    <name>
+      <text>NFCR_ParsonsProblem_Func_1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h4 class="" data-start="217" data-end="242">📝 Aufgabenstellung:</h4>
+<p class="" data-start="244" data-end="432">Erstelle eine Funktion <code data-start="267" data-end="277">abs_diff</code>, die zwei Ganzzahlen (<code data-start="300" data-end="303">a</code> und <code data-start="308" data-end="311">b</code>) als Parameter erh&auml;lt und den absoluten Unterschied zwischen beiden Zahlen zur&uuml;ckgibt &ndash; also immer einen positiven Wert.</p>
+<p class="" data-start="434" data-end="443">Beispiel:</p>
+<ul data-start="445" data-end="520">
+<li class="" data-start="445" data-end="470">
+<p class="" data-start="447" data-end="470"><code data-start="447" data-end="464">abs_diff(10, 4)</code> &rarr; <code data-start="467" data-end="470">6</code></p>
+</li>
+<li class="" data-start="471" data-end="495">
+<p class="" data-start="473" data-end="495"><code data-start="473" data-end="489">abs_diff(3, 9)</code> &rarr; <code data-start="492" data-end="495">6</code></p>
+</li>
+<li class="" data-start="496" data-end="520">
+<p class="" data-start="498" data-end="520"><code data-start="498" data-end="514">abs_diff(5, 5)</code> &rarr; <code data-start="517" data-end="520">0</code></p>
+</li>
+</ul>
+<p class="" data-start="522" data-end="606">Ordne die folgenden Codezeilen so, dass sie die gew&uuml;nschte Funktion korrekt ergeben:</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>c_ParsonsProblem_function</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>1</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[{"CR-parsons-target":[""],"CR-parsons-source":["}\n} else {\nreturn b - a;\nint abs_diff(int a, int b) {\n}\nreturn a - b;\nif (a > b) {"]}]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[{"CR-parsons-target":["int abs_diff(int a, int b) {\n    if (a > b) {\n        return a - b;\n    } else {\n        return b - a;\n    }\n}\n"],"CR-parsons-source":[""]}]]></answer>
+    <validateonsave>0</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>twig</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald><![CDATA[{"code_width":"500px"}]]></templateparamsevald>
+    <twigall>1</twigall>
+    <uiplugin></uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text><![CDATA[printf("%d", abs_diff(-100, -97));
+]]></text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>3</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text><![CDATA[printf("%d", abs_diff(-1, 9));]]></text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>10</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text><![CDATA[printf("%d", abs_diff(5, 9));]]></text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>4</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text><![CDATA[printf("%d", abs_diff(5, 5));]]></text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>0</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+</quiz>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 830  -->
+  <question type="coderunner">
+    <name>
+      <text>NFCR_FillTheGaps_Snippet_1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Fill in the gaps in the answer box code so that the function behaves as documented. [This is a variant of the previous example, this time using a text area to fill out the body of the loop.]</p>
+<p>You answer cannot use <em>break</em>&nbsp;or <em>return</em>.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>c_gapfiller_snippet</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>1</showsource>
+    <answerboxlines>10</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload></answerpreload>
+    <globalextra><![CDATA[if (number {[1, 5 ]}) {
+    printf("The number is positive.\n");
+} {[1, 10 ]} (number {[1, 5 ]}) {
+    printf("The number is negative.");
+} else {
+    printf("The number is zero.");
+};]]></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[["> 0","else if","< 0"]]]></answer>
+    <validateonsave>0</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams><![CDATA[{"maxfieldlength": 100, "proscribedsubstrings": ["break", "return"]}]]></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>twig</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald><![CDATA[{"maxfieldlength":100,"proscribedsubstrings":["break","return"]}]]></templateparamsevald>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>int number = 8;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>The number is positive.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>int number = -9;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>The number is negative.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>int number = 0;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>The number is zero.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+</quiz>

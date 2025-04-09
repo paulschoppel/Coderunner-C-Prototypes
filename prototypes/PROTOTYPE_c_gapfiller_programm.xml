@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 846  -->
+  <question type="coderunner">
+    <name>
+      <text>PROTOTYPE_c_gapfiller_programm</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A C gap filler. For this question, a complete working C programm must be pasted into the globalextra field. Portions of that script can then be replaced with HTML input or textarea elements using one of the following formats:</p>
+<pre>{[ 20 ]}     # Am HTML entry field of width 20
+{[ 10, 20 ]} # An HTML text area 10 columns x 20 rows
+</pre>
+<p>The values entered into those fields by the student are inserted back into the program, which is then compiled and run against all tests in the usual way.</p>
+<p><strong>Template parameters:</strong></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>gapfiller_ui_source</strong>. Where to take the source code from. Must be either <em>test0</em>&nbsp;to take if from the test code or <em>globalextra</em>. The latter is the default and recommended for all normal situations. If <em>test0 </em>is chosen, the answer box displays the source taken from the first test case's code. However, if the question has multiple test cases, the field values from the student's answer are filled into all the different test cases in turn.</li>
+<li><strong>maxfieldlength.&nbsp;</strong>The maximum length of a string that can be entered into any of the fields. Default: 50</li>
+<li><strong>proscribedsubstrings</strong>&nbsp;A list of strings that must not appear in any of the fields. Default [].</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>c_gapfiller_programm</coderunnertype>
+    <prototypetype>2</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>0</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>1</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload></answerpreload>
+    <globalextra></globalextra>
+    <useace>1</useace>
+    <resultcolumns></resultcolumns>
+    <template><![CDATA[{# DEBUG_MODE (1: enabled, 0: disabled) #}
+{% set DEBUG_MODE = 0 %}
+{% if DEBUG_MODE %}
+// --- DEBUG ---
+// IS_PRECHECK: {{ IS_PRECHECK }}
+// STUDENT_ANSWER (raw): {{ STUDENT_ANSWER }}
+// QUESTION.globalextra (raw): QUESTION.globalextra
+// Number of test cases: {{ TESTCASES|length }}
+{% endif %}
+
+{% set STUDENT_ANSWER = STUDENT_ANSWER|replace({
+    '[':'' ,
+    ']':''
+}) %}
+{% set STUDENT_ANSWER = STUDENT_ANSWER|replace({'"': ''}) %}
+{% set STUDENT_ANSWER = STUDENT_ANSWER|split(',') %}
+
+{% if DEBUG_MODE %}
+// --- DEBUG ---
+/* STUDENT_ANSWER: {{ STUDENT_ANSWER }} */
+{% endif %}
+
+{# Split QUESTION.globalextra by input field markers (# RegEx-like split by '{[x, y]}') #}
+{% set parts = QUESTION.globalextra | split('{[') %}
+
+{# Reconstruct code by inserting STUDENT_ANSWER between the parts #}
+{% set final_code = '' %}
+
+{# First element: text before the first placeholder #}
+{% set final_code = final_code ~ parts[0] %}
+
+{% if DEBUG_MODE %}
+// --- DEBUG ---
+/* final_code directly after initialization:
+{{ final_code }}
+*/
+{% endif %}
+
+
+{# Insert STUDENT_ANSWERs and the following parts #}
+{% for i in 1..parts|length - 1 %}
+    {% set answer = STUDENT_ANSWER[loop.index0] | e('c') %}
+    {% if DEBUG_MODE %}
+    // answer: 
+    /* {{ answer }} */
+    {% endif %}
+    
+    {# Split current part at end of placeholder ']}', extract trailing text #}
+    {% set subparts = ('1,' ~ parts[i]) | split(']}') %}
+    
+    {% if DEBUG_MODE %}
+    // --- DEBUG ---
+    /*   subparts[0]: {{ subparts[0] }}
+         subparts[1]: {{ subparts[1] }}
+         subparts[2]: {{ subparts[2] }}
+    */
+    {% endif %}
+    
+    {# Append answer #}
+    {% set final_code = final_code ~ answer %}
+    
+    {# Append trailing text #}
+    {% set final_code = final_code ~ subparts[1] %}
+{% endfor %}
+
+{% if DEBUG_MODE %}
+/* 
+{{ final_code }}
+*/
+{% endif %}
+
+
+{% if DEBUG_MODE %}
+// --- Final Assembled Code from Student Answer ---
+// ------- embedded in a complete C program -------
+{% endif %}
+
+
+//#define SEPARATOR "#<ab@17943918#@>#"
+{{ final_code }}
+//printf("%s\n", SEPARATOR);
+]]></template>
+    <iscombinatortemplate>0</iscombinatortemplate>
+    <allowmultiplestdins>0</allowmultiplestdins>
+    <answer></answer>
+    <validateonsave>0</validateonsave>
+    <testsplitterre><![CDATA[|#<ab@17943918#@>#\n|ms]]></testsplitterre>
+    <language>C</language>
+    <acelang>C</acelang>
+    <sandbox></sandbox>
+    <grader>EqualityGrader</grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>twig</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald>{}</templateparamsevald>
+    <twigall>0</twigall>
+    <uiplugin>gapfiller</uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+    </testcases>
+  </question>
+
+</quiz>

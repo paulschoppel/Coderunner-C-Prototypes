@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 855  -->
+  <question type="coderunner">
+    <name>
+      <text>NFCR_ParsonsProblem_Snippet_1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h3 class="" data-start="227" data-end="257">🧭 Einsatz im Kontrollzentrum: Stabil oder kritisch?</h3>
+<hr class="" data-start="1230" data-end="1233">
+<h4 data-start="259" data-end="563"><strong>📝&nbsp;</strong>Aufgabenstellung</h4>
+<p class="" data-start="466" data-end="628">Du entwickelst die Sicherheitslogik f&uuml;r einen hochsensiblen Reaktor, in dem ein instabiler chemischer Prozess &uuml;berwacht wird. Es werden zwei Messgr&ouml;&szlig;en &uuml;berwacht:</p>
+<ul data-start="630" data-end="681">
+<li class="" data-start="630" data-end="655">
+<p class="" data-start="632" data-end="655"><code data-start="632" data-end="642">pressure</code> in <strong data-start="646" data-end="653">Bar</strong></p>
+</li>
+<li class="" data-start="656" data-end="681">
+<p class="" data-start="658" data-end="681"><code data-start="658" data-end="671">temperature</code> in <strong data-start="675" data-end="681">&deg;C</strong></p>
+</li>
+</ul>
+<p class="" data-start="683" data-end="765">Die Reaktorkammer darf <strong data-start="706" data-end="723">nur betrieben</strong> werden, wenn die Bedingungen stabil sind. ✅</p>
+<hr class="" data-start="1230" data-end="1233">
+<h4 data-start="1235" data-end="1264">🧪 Sichere Wertebereiche:</h4>
+<ul data-start="1266" data-end="1420">
+<li class="" data-start="1266" data-end="1296">
+<p class="" data-start="1268" data-end="1296">Temperatur: <strong data-start="1280" data-end="1294">100&ndash;200 &deg;C</strong></p>
+</li>
+<li class="" data-start="1297" data-end="1321">
+<p class="" data-start="1299" data-end="1321">Druck: <strong data-start="1306" data-end="1321">1.0&ndash;2.5 Bar</strong></p>
+</li>
+</ul>
+<hr class="" data-start="767" data-end="770">
+<h4 data-start="772" data-end="809">🎯 Anforderungen an das Programm:</h4>
+<ol data-start="811" data-end="1228">
+<li class="" data-start="811" data-end="918">
+<p class="" data-start="814" data-end="918">Wenn <strong data-start="819" data-end="854">beide Werte im sicheren Bereich</strong> sind, gib aus:<br data-start="869" data-end="872"><code data-start="875" data-end="918">"System stabil. Reaktion l&auml;uft normal."</code></p>
+</li>
+<li class="" data-start="920" data-end="1083">
+<p class="" data-start="923" data-end="1083">Wenn <strong data-start="928" data-end="958">nur einer der beiden Werte</strong> au&szlig;erhalb des sicheren Bereichs liegt, gib aus:<br data-start="1013" data-end="1016"><code data-start="1019" data-end="1083">"Instabilit&auml;t erkannt. K&uuml;hl- und Entlastungssysteme aktiv."</code></p>
+</li>
+<li class="" data-start="1085" data-end="1228">
+<p class="" data-start="1088" data-end="1228">Wenn <strong data-start="1093" data-end="1158">beide Werte</strong> au&szlig;erhalb des sicheren Bereichs liegen, gib aus:<br data-start="1168" data-end="1171"><code data-start="1174" data-end="1228">"KRITISCHER ZUSTAND! Notabschaltung eingeleitet!"</code></p>
+</li>
+</ol>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>c_ParsonsProblem_snippet</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[{"CR-parsons-target":[""],"CR-parsons-source":["int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);\n} else if (temp_ok || pressure_ok) {\nif (temp_ok && pressure_ok) {\nprintf(\"Instabilität erkannt. Kühl- und Entlastungssysteme aktiv.\");\nprintf(\"KRITISCHER ZUSTAND! Notabschaltung eingeleitet!\");\nint temp_ok = (temperature >= 100.0 && temperature <= 200.0);\nprintf(\"System stabil. Reaktion läuft normal.\");\n}\n} else {"]}]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[{"CR-parsons-target":["int temp_ok = (temperature >= 100.0 && temperature <= 200.0);\nint pressure_ok = (pressure >= 1.0 && pressure <= 2.5);\nif (temp_ok && pressure_ok) {\n    printf(\"System stabil. Reaktion läuft normal.\");\n} else if (temp_ok || pressure_ok) {\n    printf(\"Instabilität erkannt. Kühl- und Entlastungssysteme aktiv.\");\n} else {\n    printf(\"KRITISCHER ZUSTAND! Notabschaltung eingeleitet!\");\n}"],"CR-parsons-source":[""]}]]></answer>
+    <validateonsave>0</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>None</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald><![CDATA[{"code_width":"500px"}]]></templateparamsevald>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>float temperature = 118.3;
+float pressure = 1.4;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>System stabil. Reaktion läuft normal.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>float temperature = 5.3;
+float pressure = 1.4;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Instabilität erkannt. Kühl- und Entlastungssysteme aktiv.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>float temperature = 118.3;
+float pressure = 0.4;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Instabilität erkannt. Kühl- und Entlastungssysteme aktiv.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>float temperature = 7.3;
+float pressure = 0.4;</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>KRITISCHER ZUSTAND! Notabschaltung eingeleitet!</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+</quiz>

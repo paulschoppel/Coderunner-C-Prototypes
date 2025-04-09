@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 829  -->
+  <question type="coderunner">
+    <name>
+      <text>NFCR_ParsonsProblem_Func_2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h4 class="" data-start="217" data-end="242">📝 Aufgabenstellung:</h4>
+<p>Ordne die folgenden Zeilen so, dass die Funktion <code data-start="299" data-end="308">is_even</code> korrekt bestimmt, ob eine Zahl gerade ist. Sie soll <code data-start="361" data-end="364">1</code> zur&uuml;ckgeben, wenn die Zahl gerade ist, sonst <code data-start="410" data-end="413">0</code>.</p>
+<p class="" data-start="308" data-end="321"><strong data-start="308" data-end="321">Beispiel:</strong></p>
+<ul data-start="323" data-end="366">
+<li class="" data-start="323" data-end="345">
+<p class="" data-start="325" data-end="345"><code data-start="325" data-end="337">is_even(4)</code> &rarr; <code data-start="340" data-end="343">1</code></p>
+</li>
+<li class="" data-start="346" data-end="366">
+<p class="" data-start="348" data-end="366"><code data-start="348" data-end="360">is_even(7)</code> &rarr; <code data-start="363" data-end="366">0</code></p>
+</li>
+</ul>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>c_ParsonsProblem_function</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>1</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[{"CR-parsons-target":[""],"CR-parsons-source":["return 0;\n} else {\nreturn 1;\n}\nint is_even(int number) {\n}\nif (number % 2 == 0) {"]}]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[{"CR-parsons-target":["int is_even(int number) {\n    if (number % 2 == 0) {\n        return 1;\n    } else {\n        return 0;\n    }\n}\n"],"CR-parsons-source":[""]}]]></answer>
+    <validateonsave>0</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>twig</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald><![CDATA[{"code_width":"500px"}]]></templateparamsevald>
+    <twigall>1</twigall>
+    <uiplugin></uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text><![CDATA[printf("%d",is_even(42));]]></text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>1</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text><![CDATA[printf("%d",is_even(31));]]></text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>0</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+</quiz>

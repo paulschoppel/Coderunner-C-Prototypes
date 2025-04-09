@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 825  -->
+  <question type="coderunner">
+    <name>
+      <text>NFCR_ParsonsProblem_Func_3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<h3 class="" data-start="227" data-end="257">🧭 Abenteuer im D&uuml;sterwald</h3>
+<hr class="" data-start="1230" data-end="1233">
+<h4 data-start="259" data-end="563"><strong>📝&nbsp;</strong>Aufgabenstellung</h4>
+<p class="" data-start="50" data-end="432">Du bist Teil einer tapferen Abenteurergruppe, die sich auf eine gef&auml;hrliche Mission in den geheimnisvollen Tiefen des D&uuml;sterwalds begibt. In den Ruinen einer l&auml;ngst vergessenen Zivilisation sto&szlig;t ihr auf ein uraltes, mystisches Terminal. Das Ger&auml;t soll magische Kr&auml;fte entfalten &ndash; allerdings nur, wenn die richtigen Befehle eingegeben werden.</p>
+<p class="" data-start="434" data-end="741">Deine Herausforderung besteht darin, das Sicherheitsprotokoll des Terminals zu implementieren. Konkret soll die Funktion <code data-start="583" data-end="620">void handleCommand(int commandCode)</code> entwickelt werden, die abh&auml;ngig vom eingegebenen numerischen Befehlscode eine entsprechende Aktion ausf&uuml;hrt.</p>
+<p>&nbsp;</p>
+<hr class="" data-start="783" data-end="786">
+<h4 data-start="788" data-end="807">🧠 Befehle</h4>
+<div class="overflow-x-auto contain-inline-size">
+<table style="width: 86.0927%;" data-start="809" data-end="1440">
+<thead data-start="809" data-end="899">
+<tr data-start="809" data-end="899">
+<th style="width: 21.4286%;" data-start="809" data-end="816">Befehlscode</th>
+<th style="width: 31.0811%;" data-start="816" data-end="833">Befehl</th>
+<th style="width: 47.4903%;" data-start="833" data-end="899">Ausgabe</th>
+</tr>
+</thead>
+<tbody data-start="991" data-end="1440">
+<tr data-start="991" data-end="1080">
+<td style="width: 21.4286%;">1</td>
+<td style="width: 31.0811%;">&Ouml;ffne Tor</td>
+<td style="width: 47.4903%;">&bdquo;Das alte Steintor &ouml;ffnet sich knarrend.&ldquo;</td>
+</tr>
+<tr data-start="1081" data-end="1170">
+<td style="width: 21.4286%;">2</td>
+<td style="width: 31.0811%;">Aktiviere Licht</td>
+<td style="width: 47.4903%;">&bdquo;Ein magisches Licht erf&uuml;llt den Raum.&ldquo;</td>
+</tr>
+<tr data-start="1171" data-end="1260">
+<td style="width: 21.4286%;">3</td>
+<td style="width: 31.0811%;">Zeige Karte</td>
+<td style="width: 47.4903%;">&bdquo;Eine uralte Karte erscheint vor euren Augen.&ldquo;</td>
+</tr>
+<tr data-start="1261" data-end="1350">
+<td style="width: 21.4286%;">4</td>
+<td style="width: 31.0811%;">Rufe W&auml;chter</td>
+<td style="width: 47.4903%;">&bdquo;Ein steinerner W&auml;chter erwacht zum Leben!&ldquo;</td>
+</tr>
+<tr data-start="1351" data-end="1440">
+<td style="width: 21.4286%;">Sonst</td>
+<td style="width: 31.0811%;">Unbekannter Befehl</td>
+<td style="width: 47.4903%;">&bdquo;Fehlfunktion! Der Terminal reagiert nicht.&ldquo;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="" data-start="1442" data-end="1445">
+<h4 data-start="1447" data-end="1472">🎯 Ziel der Aufgabe</h4>
+<ul data-start="1473" data-end="1775">
+<li class="" data-start="1473" data-end="1600">
+<p class="" data-start="1666" data-end="1775">Sortiere die Codezeilen, damit die Funktion <code data-start="578" data-end="615">void handleCommand(int commandCode)</code> die richtigen Ausgaben erzeugt!</p>
+</li>
+</ul>
+<hr class="" data-start="1777" data-end="1780">]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>c_ParsonsProblem_function</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[{"CR-parsons-target":[""],"CR-parsons-source":["            printf(\"Fehlfunktion! Der Terminal reagiert nicht.\");\n        default:\n    switch (commandCode) {\n            break;\n        case 2:\n        case 1:\nvoid handleCommand(int commandCode) {\n            printf(\"Ein magisches Licht erfüllt den Raum.\");\n}\n        case 3:\n        case 4:\n            break;\n            printf(\"Ein steinerner Wächter erwacht zum Leben!\");\n            printf(\"Eine uralte Karte erscheint vor euren Augen.\");\n            break;\n    }\n            printf(\"Das alte Steintor öffnet sich knarrend.\");\n            break;"]}]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[{"CR-parsons-target":["void handleCommand(int commandCode) {\n    switch (commandCode) {\n        case 1:\n            printf(\"Das alte Steintor öffnet sich knarrend.\");\n            break;\n        case 2:\n            printf(\"Ein magisches Licht erfüllt den Raum.\");\n            break;\n        case 3:\n            printf(\"Eine uralte Karte erscheint vor euren Augen.\");\n            break;\n        case 4:\n            printf(\"Ein steinerner Wächter erwacht zum Leben!\");\n            break;\n        default:\n            printf(\"Fehlfunktion! Der Terminal reagiert nicht.\");\n    }\n}"],"CR-parsons-source":[""]}]]></answer>
+    <validateonsave>0</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>None</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald><![CDATA[{"code_width":"500px"}]]></templateparamsevald>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>handleCommand(1);</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Das alte Steintor öffnet sich knarrend.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>handleCommand(2);</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Ein magisches Licht erfüllt den Raum.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>handleCommand(3);</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Eine uralte Karte erscheint vor euren Augen.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>handleCommand(4);</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Ein steinerner Wächter erwacht zum Leben!</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>handleCommand(5);</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Fehlfunktion! Der Terminal reagiert nicht.</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+</quiz>
