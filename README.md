@@ -544,8 +544,6 @@ In this setup:
 - **Expected Output**: Defines the expected return value printed to the console (`4` in this case).
 - **Extra template data**: Usually not required.
 
-This structure allows targeted evaluation of students' ability to reconstruct functional logic, focusing on function signatures, control flow, and return values.
-
 ## Acknowledgements
 
 This repository builds upon the outstanding work of the Moodle **CodeRunner** plugin, developed and maintained by **Richard Lobb** and other contributors. The CodeRunner project provides the foundational infrastructure that makes the creation of custom programming exercises possible within the Moodle environment.
