@@ -125,13 +125,13 @@ To integrate the provided prototypes into your Moodle system:
 1. Download the XML files located in `./prototypes/`.
    Each XML file contains the complete configuration for a specific custom prototype.
 
-2. In Moodle, navigate to the Question Bank of an existing Coderunner Quiz.
+2. Log in to Moodle in a teacher role with site administration rights, enable edit mode, and navigate to the Coderunner Question Bank. (To do so, open an existing Coderunner Quiz and select the 'Question Bank' tab.)
 
-3. Select the category where your built-in prototypes are stored in (`CR_PROTOTYPES` or similar)
+3. Select the category where your built-in prototypes are stored in (`SYSTEM` -> `CR_PROTOTYPES` or similar)
 
-   ⚠️ Note: This step usually requires site administrator rights.
+   ⚠️ Note: This step usually requires site administrator rights. Otherwise you will not see the `SYSTEM` tab.
 
-4. Select `Import` in the upper left corner (default: `Questions`) and upload the XML-Files.
+4. Select `Import` in the upper left corner dropdown menu (default: `Questions`) and upload the XML-Files.
 
 5. Go back to `Questions` in the dropdown menu in the upper left corner and check if the new prototype is available in the Prototypes-Category. If so, it will then be available when creating new CodeRunner questions.
 
@@ -264,7 +264,7 @@ In Fill-the-Gaps exercises designed for complete programs, the student's complet
 
 Unlike the snippet-based approach, the program is not duplicated within a single source file for multiple tests. Instead, the program is compiled once and executed multiple times, each time providing different standard input values through `scanf` or similar mechanisms.
 
-For example, the following incomplete program might be presented to the student:
+For example, the following incomplete program might be presented to the student. Background: In this exercise, students are tasked with completing a C program that simulates access control to a laboratory. Only users who enter the correct PIN code (1234) are allowed to gain access.
 
 ```c
 #include <stdio.h>
@@ -341,7 +341,7 @@ To create Parsons Problems in Moodle Coderunner for C programming, the following
 
 #### Snippet
 
-In Parsons Problem exercises designed for code snippets, students are presented with shuffled lines of a small program **fragment**. For example, students might be given the following shuffled lines in the Moodle Coderunner interface:
+In Parsons Problem exercises designed for code snippets, students are presented with shuffled lines of a small program **fragment**. For example, students might be given the following shuffled lines in the Moodle Coderunner interface. In this exercise, students must rearrange a shuffled C code snippet that checks whether temperature and pressure values are within safe operating ranges.
 
 ```text
 int pressure_ok = (pressure >= 1.0 && pressure <= 2.5);
@@ -458,9 +458,8 @@ The test cases in Moodle are configured accordingly. An example test setup for t
 
 In this setup:
 - **Test case**: Sets up the input variables (`float temperature = 118.3; float pressure = 1.4;`).
-- **Standard Input**: Remains empty.
+- **Standard Input**: Remains empty if you have no `scanf()` calls or similair.
 - **Expected Output**: Matches the program's expected printed result for the provided conditions.
-- **Extra template data**: Usually not required.
 
 
 #### Function
@@ -468,7 +467,7 @@ In this setup:
 In Parsons Problem exercises designed for standalone functions, students are given scrambled lines that define an entire function, including control structures like `if` statements or loops.
 Their task is to reorder the lines and reconstruct a correct and logically functioning implementation.
 
-For example, students might be given the following shuffled lines in the Moodle Coderunner interface:
+For example, students might be given the following shuffled lines in the Moodle Coderunner interface. Background: In this exercise, students are tasked with correctly reordering scrambled lines to reconstruct a complete function that calculates the absolute difference between two integers.
 
 ```text
 }
